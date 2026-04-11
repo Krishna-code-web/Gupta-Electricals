@@ -24,28 +24,27 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-gray-900 text-white sticky top-0 z-50 shadow-lg">
+    <nav className="text-blue-950 top-0 z-50 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 py-3">
         <div className="flex items-center justify-between gap-4">
 
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 text-xl font-bold text-yellow-400 shrink-0">
-            <Zap size={24} />
-            ElectroStore
+          <Link to="/" className="flex items-center gap-2 text-xl font-bold shrink-0">
+            Gupta Electricals
           </Link>
-
+          
           {/* Search Bar */}
           <form onSubmit={handleSearch} className="hidden md:flex flex-1 max-w-xl">
             <input
               type="text"
-              placeholder="Search mobiles, laptops, TVs..."
+              placeholder="Search IC's, Mosfets, Driver Card..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full px-4 py-2 rounded-l-lg text-gray-900 outline-none"
+              className="w-full border border-blue-900 border-r-0 px-4 py-2 rounded-l-lg outline-none"
             />
             <button
               type="submit"
-              className="bg-yellow-400 text-gray-900 px-4 py-2 rounded-r-lg hover:bg-yellow-500"
+              className="bg-blue-900 text-gray-900 px-4 py-2 rounded-r-lg hover:bg-blue-500"
             >
               <Search size={20} />
             </button>
