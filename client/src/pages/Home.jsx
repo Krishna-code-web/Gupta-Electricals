@@ -2,6 +2,21 @@ import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { ShoppingCart, Star, ArrowRight, Shield, Truck, Headphones, RotateCcw } from 'lucide-react';
 import { toast } from 'react-hot-toast';
+import hero from '../assets/hero.png'
+import ic from '../assets/categories/ic.png'
+import driver from '../assets/categories/driver.png'
+import capacitor from '../assets/categories/capacitor.png'
+import fuse from '../assets/categories/fuse.png'
+import ic2 from '../assets/categories/ic2.png'
+import IGBT from '../assets/categories/IGBT.png'
+import mosfet from '../assets/categories/mosfet.png'
+import powerC from '../assets/categories/powerC.png'
+import relay from '../assets/categories/relay.png'
+import thyristor from '../assets/categories/thyristor.png'
+import transformer from '../assets/categories/transformer.png'
+import transistor from '../assets/categories/transistor.png'
+// import driver from '../assets/categories/driver.png'
+
 import axios from '../utils/axios.js';
 
 const Home = () => {
@@ -24,18 +39,18 @@ const Home = () => {
   }, []);
 
   const categories = [
-    { name: 'Programmable IC', emoji: '🔬', color: 'bg-blue-100 text-blue-700' },
-    { name: 'Driver Control Card', emoji: '🎛️', color: 'bg-purple-100 text-purple-700' },
-    { name: 'Mosfet Transistor', emoji: '⚡', color: 'bg-yellow-100 text-yellow-700' },
-    { name: 'Integrated Circuits', emoji: '🔲', color: 'bg-green-100 text-green-700' },
-    { name: 'Thyristor Module', emoji: '🔌', color: 'bg-red-100 text-red-700' },
-    { name: 'Capacitors', emoji: '🔋', color: 'bg-orange-100 text-orange-700' },
-    { name: 'Leone Relays', emoji: '🔀', color: 'bg-teal-100 text-teal-700' },
-    { name: 'Electronic Transistors', emoji: '📡', color: 'bg-indigo-100 text-indigo-700' },
-    { name: 'Fuse Holder', emoji: '🛡️', color: 'bg-pink-100 text-pink-700' },
-    { name: 'Single Phase Transformer', emoji: '🔄', color: 'bg-cyan-100 text-cyan-700' },
-    { name: 'Power Capacitor', emoji: '⚙️', color: 'bg-lime-100 text-lime-700' },
-    { name: 'IGBT Module', emoji: '🔧', color: 'bg-amber-100 text-amber-700' },
+    { name: 'Programmable IC', emoji: ic, color: 'bg-blue-100 text-blue-700' },
+    { name: 'Driver Control Card', emoji: driver, color: 'bg-purple-100 text-purple-700' },
+    { name: 'Mosfet Transistor', emoji: mosfet, color: 'bg-yellow-100 text-yellow-700' },
+    { name: 'Integrated Circuits', emoji: ic2, color: 'bg-green-100 text-green-700' },
+    { name: 'Thyristor Module', emoji: thyristor, color: 'bg-red-100 text-red-700' },
+    { name: 'Capacitors', emoji: capacitor, color: 'bg-orange-100 text-orange-700' },
+    { name: 'Leone Relays', emoji: relay, color: 'bg-teal-100 text-teal-700' },
+    { name: 'Electronic Transistors', emoji: transistor, color: 'bg-indigo-100 text-indigo-700' },
+    { name: 'Fuse Holder', emoji: fuse, color: 'bg-pink-100 text-pink-700' },
+    { name: 'Single Phase Transformer', emoji: transformer, color: 'bg-cyan-100 text-cyan-700' },
+    { name: 'Power Capacitor', emoji: powerC, color: 'bg-lime-100 text-lime-700' },
+    { name: 'IGBT Module', emoji: IGBT, color: 'bg-amber-100 text-amber-700' },
     { name: 'Electrical Relays', emoji: '💡', color: 'bg-violet-100 text-violet-700' },
     { name: 'Spare Parts', emoji: '🔩', color: 'bg-gray-100 text-gray-700' },
     { name: 'Colling Fan', emoji: '🌀', color: 'bg-sky-100 text-sky-700' },
@@ -70,7 +85,7 @@ const Home = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-gray-900 to-gray-800 text-white py-20 px-4">
+      <section className="bg-linear-to-r from-gray-900 to-gray-600 text-white py-20 px-4">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
           <div className="flex-1 text-center md:text-left">
             <span className="bg-yellow-400 text-gray-900 text-sm font-bold px-3 py-1 rounded-full">
@@ -99,7 +114,7 @@ const Home = () => {
             </div>
           </div>
           <div className="flex-1 flex justify-center">
-            <div className="text-9xl animate-bounce">⚡</div>
+            <div className="animate-pulse"><img src={hero} alt="hero" /></div>
           </div>
         </div>
       </section>
@@ -131,7 +146,7 @@ const Home = () => {
               to={`/products?category=${cat.name}`}
               className={`${cat.color} rounded-xl p-4 text-center hover:scale-105 transition cursor-pointer`}
             >
-              <div className="text-4xl mb-2">{cat.emoji}</div>
+              <div className="text-4xl flex justify-center mb-2"><img className='h-20 w-20' src={cat.emoji} alt="" /></div>
               <div className="font-semibold text-sm">{cat.name}</div>
             </Link>
           ))}
@@ -216,7 +231,7 @@ const Home = () => {
         )}
       </section>
 
-      {/* Banner */}
+      {/* Banner
       <section className="max-w-7xl mx-auto px-4 py-8">
         <div className="bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl p-8 text-white text-center">
           <h2 className="text-3xl font-bold mb-2">Big Sale This Week! 🎉</h2>
@@ -228,7 +243,7 @@ const Home = () => {
             Grab the Deal
           </Link>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };

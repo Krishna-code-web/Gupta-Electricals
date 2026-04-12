@@ -44,7 +44,7 @@ const Navbar = () => {
             />
             <button
               type="submit"
-              className="bg-blue-900 text-gray-900 px-4 py-2 rounded-r-lg hover:bg-blue-500"
+              className="bg-blue-900 text-white px-4 py-2 rounded-r-lg hover:bg-blue-950"
             >
               <Search size={20} />
             </button>
@@ -54,7 +54,7 @@ const Navbar = () => {
           <div className="flex items-center gap-4">
 
             {/* Cart */}
-            <Link to="/cart" className="flex items-center gap-1 hover:text-yellow-400">
+            <Link to="/cart" className="flex items-center gap-1">
               <ShoppingCart size={22} />
               <span className="hidden md:inline text-sm">Cart</span>
             </Link>
@@ -64,7 +64,7 @@ const Navbar = () => {
               <div className="relative">
                 <button
                   onClick={() => setDropdownOpen(!dropdownOpen)}
-                  className="flex items-center gap-1 hover:text-yellow-400"
+                  className="flex items-center gap-1"
                 >
                   <User size={22} />
                   <span className="hidden md:inline text-sm">{user.name.split(' ')[0]}</span>
@@ -100,7 +100,7 @@ const Navbar = () => {
             ) : (
               <Link
                 to="/login"
-                className="bg-yellow-400 text-gray-900 px-4 py-1.5 rounded-lg font-medium hover:bg-yellow-500 text-sm"
+                className="bg-blue-900 hover:bg-blue-950 text-white px-4 py-1.5 rounded-lg font-medium text-sm"
               >
                 Login
               </Link>
@@ -123,11 +123,11 @@ const Navbar = () => {
             placeholder="Search products..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full px-4 py-2 rounded-l-lg text-gray-900 outline-none"
+            className="w-full border border-blue-900 border-r-0 px-4 py-2 rounded-l-lg  outline-none"
           />
           <button
             type="submit"
-            className="bg-yellow-400 text-gray-900 px-4 py-2 rounded-r-lg"
+            className="bg-blue-900 hover:bg-blue-950 text-white px-4 py-2 rounded-r-lg"
           >
             <Search size={20} />
           </button>
@@ -136,11 +136,11 @@ const Navbar = () => {
         {/* Mobile Menu */}
         {menuOpen && (
           <div className="md:hidden mt-3 flex flex-col gap-2 pb-3 border-t border-gray-700 pt-3">
-            <Link to="/" onClick={() => setMenuOpen(false)} className="hover:text-yellow-400">Home</Link>
-            <Link to="/products" onClick={() => setMenuOpen(false)} className="hover:text-yellow-400">Products</Link>
-            <Link to="/cart" onClick={() => setMenuOpen(false)} className="hover:text-yellow-400">Cart</Link>
+            <Link to="/" onClick={() => setMenuOpen(false)} className="hover:text-blue-400">Home</Link>
+            <Link to="/products" onClick={() => setMenuOpen(false)} className="hover:text-blue-400">Products</Link>
+            <Link to="/cart" onClick={() => setMenuOpen(false)} className="hover:text-blue-400">Cart</Link>
             {user && (
-              <Link to="/my-orders" onClick={() => setMenuOpen(false)} className="hover:text-yellow-400">My Orders</Link>
+              <Link to="/my-orders" onClick={() => setMenuOpen(false)} className="hover:text-blue-400">My Orders</Link>
             )}
           </div>
         )}
