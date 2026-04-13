@@ -43,8 +43,7 @@ const Login = () => {
 
         {/* Logo */}
         <div className="flex items-center justify-center gap-2 text-2xl font-bold text-yellow-400 mb-6">
-          <Zap size={28} />
-          ElectroStore
+          Gupta Electricals
         </div>
 
         <h2 className="text-2xl font-bold text-gray-800 text-center mb-2">

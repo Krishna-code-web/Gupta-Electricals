@@ -9,11 +9,10 @@ const Footer = () => {
         {/* Brand */}
         <div>
           <div className="flex items-center gap-2 text-yellow-400 font-bold text-xl mb-3">
-            <Zap size={22} />
-            ElectroStore
+            Gupta Electricals
           </div>
           <p className="text-sm text-gray-400">
-            Your trusted electronics store. Best prices on mobiles, laptops, TVs and more.
+            Your trusted electrical store. Best prices on Mosfets, Driver Card, IC's and more.
           </p>
         </div>
 
@@ -23,9 +22,9 @@ const Footer = () => {
           <ul className="space-y-2 text-sm">
             <li><Link to="/" className="hover:text-yellow-400">Home</Link></li>
             <li><Link to="/products" className="hover:text-yellow-400">All Products</Link></li>
-            <li><Link to="/products?category=Mobile" className="hover:text-yellow-400">Mobiles</Link></li>
-            <li><Link to="/products?category=Laptop" className="hover:text-yellow-400">Laptops</Link></li>
-            <li><Link to="/products?category=TV" className="hover:text-yellow-400">TVs</Link></li>
+            <li><Link to="/products?category=Mobile" className="hover:text-yellow-400">Mosfet</Link></li>
+            <li><Link to="/products?category=Laptop" className="hover:text-yellow-400">Driver Card</Link></li>
+            <li><Link to="/products?category=TV" className="hover:text-yellow-400">IC's</Link></li>
           </ul>
         </div>
 
@@ -44,20 +43,20 @@ const Footer = () => {
           <h3 className="text-white font-semibold mb-3">Contact Us</h3>
           <ul className="space-y-2 text-sm">
             <li className="flex items-center gap-2">
-              <Phone size={16} /> +91 99999 99999
+              <Phone size={16} /> +91 8433048655
             </li>
             <li className="flex items-center gap-2">
-              <Mail size={16} /> support@electrostore.in
+              <Mail size={16} /> support@gupta-electricals.in
             </li>
             <li className="flex items-center gap-2">
-              <MapPin size={16} /> Delhi, India
+              <MapPin size={16} /> Moradabad, India
             </li>
           </ul>
         </div>
       </div>
 
       <div className="border-t border-gray-800 text-center py-4 text-sm text-gray-500">
-        © 2025 ElectroStore. All rights reserved.
+        © 2026 Gupta Electricals. All rights reserved.
       </div>
     </footer>
   );

@@ -14,10 +14,12 @@ import MyOrders from './pages/MyOrders.jsx';
 import Dashboard from './pages/admin/Dashboard.jsx';
 import AdminProducts from './pages/admin/AdminProducts.jsx';
 import AdminOrders from './pages/admin/AdminOrders.jsx';
+import ScrollToTop from './components/ui/ScrollToTop.jsx';
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Toaster position="top-center" />
       <Routes>
         {/* Customer Routes */}

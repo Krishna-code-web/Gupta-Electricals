@@ -15,6 +15,17 @@ import relay from '../assets/categories/relay.png'
 import thyristor from '../assets/categories/thyristor.png'
 import transformer from '../assets/categories/transformer.png'
 import transistor from '../assets/categories/transistor.png'
+import cooling_fan from '../assets/categories/cooling_fan.png'
+import electric_relay from '../assets/categories/electric_relay.png'
+import GPR from '../assets/categories/GPR.png'
+import microtek_inverter from '../assets/categories/microtek_inverter.png'
+import panel from '../assets/categories/panel.png'
+import power_mosfet from '../assets/categories/power_mosfet.png'
+import power_transistor from '../assets/categories/power_transistor.png'
+import spare_parts from '../assets/categories/spare_parts.png'
+import Ups_battery from '../assets/categories/Ups_battery.png'
+import voltage_stabilizer from '../assets/categories/voltage_stabilizer.png'
+
 // import driver from '../assets/categories/driver.png'
 
 import axios from '../utils/axios.js';
@@ -51,16 +62,16 @@ const Home = () => {
     { name: 'Single Phase Transformer', emoji: transformer, color: 'bg-cyan-100 text-cyan-700' },
     { name: 'Power Capacitor', emoji: powerC, color: 'bg-lime-100 text-lime-700' },
     { name: 'IGBT Module', emoji: IGBT, color: 'bg-amber-100 text-amber-700' },
-    { name: 'Electrical Relays', emoji: '💡', color: 'bg-violet-100 text-violet-700' },
-    { name: 'Spare Parts', emoji: '🔩', color: 'bg-gray-100 text-gray-700' },
-    { name: 'Colling Fan', emoji: '🌀', color: 'bg-sky-100 text-sky-700' },
-    { name: 'Voltage Stabilizer', emoji: '📊', color: 'bg-emerald-100 text-emerald-700' },
-    { name: 'Microtek Inverter', emoji: '🔆', color: 'bg-rose-100 text-rose-700' },
-    { name: 'Panel Accessories', emoji: '🗂️', color: 'bg-fuchsia-100 text-fuchsia-700' },
-    { name: 'Power Mosfet', emoji: '⚡', color: 'bg-blue-100 text-blue-800' },
-    { name: 'Power Transistor', emoji: '🔌', color: 'bg-purple-100 text-purple-800' },
-    { name: 'General Purpose Relays', emoji: '🔀', color: 'bg-green-100 text-green-800' },
-    { name: 'Ups Battery', emoji: '🔋', color: 'bg-yellow-100 text-yellow-800' },
+    { name: 'Electrical Relays', emoji: electric_relay, color: 'bg-violet-100 text-violet-700' },
+    { name: 'Spare Parts', emoji: spare_parts, color: 'bg-gray-100 text-gray-700' },
+    { name: 'Colling Fan', emoji: cooling_fan, color: 'bg-sky-100 text-sky-700' },
+    { name: 'Voltage Stabilizer', emoji: voltage_stabilizer, color: 'bg-emerald-100 text-emerald-700' },
+    { name: 'Microtek Inverter', emoji: microtek_inverter, color: 'bg-rose-100 text-rose-700' },
+    { name: 'Panel Accessories', emoji: panel, color: 'bg-fuchsia-100 text-fuchsia-700' },
+    { name: 'Power Mosfet', emoji: power_mosfet, color: 'bg-blue-100 text-blue-800' },
+    { name: 'Power Transistor', emoji: power_transistor, color: 'bg-purple-100 text-purple-800' },
+    { name: 'General Purpose Relays', emoji: GPR, color: 'bg-green-100 text-green-800' },
+    { name: 'Ups Battery', emoji: Ups_battery, color: 'bg-yellow-100 text-yellow-800' },
   ];
 
   const features = [
@@ -85,18 +96,18 @@ const Home = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-linear-to-r from-gray-900 to-gray-600 text-white py-20 px-4">
+      <section className="bg-linear-to-r from-gray-950 to-gray-800 text-white py-20 px-4">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
           <div className="flex-1 text-center md:text-left">
             <span className="bg-yellow-400 text-gray-900 text-sm font-bold px-3 py-1 rounded-full">
-              🔥 Best Deals on Electronics
+              Best Deals on Electricals 
             </span>
             <h1 className="text-4xl md:text-5xl font-bold mt-4 leading-tight">
               Shop the Latest <br />
-              <span className="text-yellow-400">Electronics</span> Online
+              <span className="text-yellow-400">Electricals Parts</span> Online
             </h1>
             <p className="text-gray-300 mt-4 text-lg">
-              Mobiles, Laptops, TVs, Audio & more — at unbeatable prices with fast delivery across India.
+              Mosfets, Driver Card, IC's & more — at unbeatable prices with fast delivery across India.
             </p>
             <div className="flex gap-4 mt-8 justify-center md:justify-start">
               <Link
@@ -109,7 +120,7 @@ const Home = () => {
                 to="/products?category=Mobile"
                 className="border border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:text-gray-900 transition"
               >
-                View Mobiles
+                View Products
               </Link>
             </div>
           </div>

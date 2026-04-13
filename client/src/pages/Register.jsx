@@ -56,15 +56,14 @@ const Register = () => {
 
         {/* Logo */}
         <div className="flex items-center justify-center gap-2 text-2xl font-bold text-yellow-400 mb-6">
-          <Zap size={28} />
-          ElectroStore
+          Gupta Electricals
         </div>
 
         <h2 className="text-2xl font-bold text-gray-800 text-center mb-2">
           Create Account
         </h2>
         <p className="text-gray-500 text-center mb-6">
-          Join ElectroStore today
+          Join Gupta Electricals today
         </p>
 
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -153,7 +152,7 @@ const Register = () => {
 
         <p className="text-center text-gray-600 mt-6">
           Already have an account?{' '}
-          <Link to="/login" className="text-yellow-500 font-semibold hover:underline">
+          <Link hrefLang='' to="/login" className="text-yellow-500 font-semibold hover:underline">
             Login here
           </Link>
         </p>
