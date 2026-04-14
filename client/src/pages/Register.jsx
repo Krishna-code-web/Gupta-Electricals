@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-hot-toast';
-import { Zap } from 'lucide-react';
 import axios from '../utils/axios.js';
 import { useAuth } from '../context/AuthContext.jsx';
 
@@ -76,7 +75,7 @@ const Register = () => {
               name="name"
               value={formData.name}
               onChange={handleChange}
-              placeholder="Krishna Kumar"
+              placeholder=""
               required
               className="w-full px-4 py-3 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-yellow-400"
             />
@@ -91,7 +90,7 @@ const Register = () => {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              placeholder="krishna@example.com"
+              placeholder=""
               required
               className="w-full px-4 py-3 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-yellow-400"
             />
@@ -106,7 +105,7 @@ const Register = () => {
               name="phone"
               value={formData.phone}
               onChange={handleChange}
-              placeholder="9999999999"
+              placeholder=""
               className="w-full px-4 py-3 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-yellow-400"
             />
           </div>
@@ -152,7 +151,7 @@ const Register = () => {
 
         <p className="text-center text-gray-600 mt-6">
           Already have an account?{' '}
-          <Link hrefLang='' to="/login" className="text-yellow-500 font-semibold hover:underline">
+          <Link to="/login" className="text-yellow-500 font-semibold hover:underline">
             Login here
           </Link>
         </p>
