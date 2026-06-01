@@ -217,10 +217,10 @@ const Products = () => {
       )}
 
       {/* Category Pills */}
-      <div className="flex gap-2 flex-wrap mb-6">
+      <div className="flex gap-2 overflow-x-auto no-scrollbar pb-3 mb-6 -mx-4 px-4 md:mx-0 md:px-0 md:flex-wrap md:pb-0">
         <button
           onClick={() => { setFilters({ ...filters, category: '' }); navigate('/products'); }}
-          className={`px-4 py-1.5 rounded-full text-sm font-medium border transition ${filters.category === '' ? 'bg-gray-900 text-white border-gray-900' : 'bg-white text-gray-600 border-gray-300 hover:border-gray-500'}`}
+          className={`px-4 py-1.5 rounded-full text-sm font-medium border transition shrink-0 whitespace-nowrap cursor-pointer ${filters.category === '' ? 'bg-gray-900 text-white border-gray-900' : 'bg-white text-gray-600 border-gray-300 hover:border-gray-500'}`}
         >
           All
         </button>
@@ -228,7 +228,7 @@ const Products = () => {
           <button
             key={cat}
             onClick={() => { setFilters({ ...filters, category: cat }); navigate(`/products?category=${cat}`); }}
-            className={`px-4 py-1.5 rounded-full text-sm font-medium border transition ${filters.category === cat ? 'bg-gray-900 text-white border-gray-900' : 'bg-white text-gray-600 border-gray-300 hover:border-gray-500'}`}
+            className={`px-4 py-1.5 rounded-full text-sm font-medium border transition shrink-0 whitespace-nowrap cursor-pointer ${filters.category === cat ? 'bg-gray-900 text-white border-gray-900' : 'bg-white text-gray-600 border-gray-300 hover:border-gray-500'}`}
           >
             {cat}
           </button>
