@@ -23,7 +23,7 @@ const Products = () => {
   });
 
   const categories = [
-    'Programmable IC', 'Driver Control Card', 'Mosfet Transistor', 'Integrated Circuits',
+    'Program IC', 'Driver Control Card', 'Mosfet Transistor', 'Integrated Circuits',
     'Thyristor Module', 'Capacitors', 'Leone Relays', 'Electronic Transistors', 'Fuse Holder',
     'Single Phase Transformer', 'Power Capacitor', 'IGBT Module', 'Electrical Relays', 'Spare Parts',
     'Colling Fan', 'Voltage Stabilizer', 'Microtek Inverter', 'Panel Accessories', 'Power Mosfet',
