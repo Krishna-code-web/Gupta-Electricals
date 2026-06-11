@@ -1,5 +1,7 @@
 const User = require('../models/User');
 const jwt = require('jsonwebtoken');
+const crypto = require('crypto');
+const { verifyFirebaseToken } = require('../utils/firebaseAuth');
 
 // Generate JWT Token
 const generateToken = (id, role) => {
@@ -88,4 +90,56 @@ const getUserProfile = async (req, res) => {
   }
 };
 
-module.exports = { registerUser, loginUser, getUserProfile };
+// @POST /api/auth/social-login
+const socialLogin = async (req, res) => {
+  try {
+    const { idToken } = req.body;
+
+    if (!idToken) {
+      return res.status(400).json({ message: 'Firebase ID Token is required' });
+    }
+
+    // Verify token using firebaseAuth utility
+    const decodedToken = await verifyFirebaseToken(idToken);
+    const { email, name, user_id: firebaseId } = decodedToken;
+
+    if (!email) {
+      return res.status(400).json({ message: 'Email not provided in social authentication' });
+    }
+
+    let user = await User.findOne({ email });
+
+    if (user) {
+      return res.json({
+        _id: user._id,
+        name: user.name,
+        email: user.email,
+        role: user.role,
+        token: generateToken(user._id, user.role)
+      });
+    }
+
+    // Create a new user if one doesn't exist
+    const secureRandomPassword = crypto.randomBytes(32).toString('hex');
+    user = await User.create({
+      name: name || email.split('@')[0],
+      email,
+      password: secureRandomPassword,
+      role: 'customer'
+    });
+
+    return res.json({
+      _id: user._id,
+      name: user.name,
+      email: user.email,
+      role: user.role,
+      token: generateToken(user._id, user.role)
+    });
+
+  } catch (error) {
+    console.error('Social Login Error:', error);
+    res.status(401).json({ message: error.message || 'Social authentication failed' });
+  }
+};
+
+module.exports = { registerUser, loginUser, getUserProfile, socialLogin };

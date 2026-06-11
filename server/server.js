@@ -31,7 +31,7 @@ app.use('/api/payment', paymentRoutes);
 app.use('/api/upload', uploadRoutes)
 
 app.get('/', (req, res) => {
-  res.send('Electronics Store API is running...');
+  res.send('Gupta Electricals API is running...');
 });
 
 const PORT = process.env.PORT || 5000;

@@ -9,6 +9,7 @@ const createPayment = async (req, res) => {
         key_id: process.env.RAZORPAY_KEY_ID,
         key_secret: process.env.RAZORPAY_KEY_SECRET
     });
+
     
     const { orderId } = req.body;
 
